@@ -53,7 +53,7 @@ export default function SignUpPage() {
                 <IMaskInput name="phone" mask="(00) 00000-0000" placeholder="celular (apenas números)"
                     value={phone} onChange={(e) => setPhone(e.target.value)} required />
 
-                <input name="email" type="email" placeholder="email"  
+                <input name="email" type="text" placeholder="email"  
                     value={email} onChange={(e) => setEmail(e.target.value)} required />
 
                 <input name="password" placeholder="senha" type="password"
