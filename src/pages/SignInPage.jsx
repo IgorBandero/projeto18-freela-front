@@ -24,7 +24,7 @@ export default function SignInPage() {
         });
                 
         promise.catch(res => {
-                alert(res.response.data.message);
+                alert(res.response.data);
         });
     }
 
@@ -32,8 +32,8 @@ export default function SignInPage() {
         <Container>
             <Logo />
             <form onSubmit={handleLogin}>
-                <input placeholder="email" type="email" value={email}
-                    onChange={(e) => setEmail(e.target.value)} required />
+                <input placeholder="email" type="text" value={email}
+                    onChange={(e) => setEmail(e.target.value.trim())} required />
                 <input placeholder="senha" type="password" value={password}
                     onChange={(e) => setPassword(e.target.value)} required />                
                 <button type="submit" > Entrar </button>

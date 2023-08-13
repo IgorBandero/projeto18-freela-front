@@ -24,13 +24,12 @@ export default function SignUpPage() {
             const promise = AuthApi.signup({name, cpf, phone, email, password});
 
             promise.then(res => {
-                    console.log(res.data.message)
-                    alert(res.data.message);
+                    alert(res.response.data);
                     navigate("/");
             });
                     
             promise.catch(res => {
-                    alert(res.response.data.message);
+                    alert(res.response.data);
             });
         }
         else {
