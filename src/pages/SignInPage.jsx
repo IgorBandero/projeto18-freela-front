@@ -2,8 +2,8 @@ import { useNavigate, Link } from "react-router-dom";
 import { useState, useContext} from "react";
 import AuthApi from "../services/AuthApi";
 import Context from "../contexts/Context";
-import styled from "styled-components";
-import LogoMeCansei from "../assets/logo.png";
+import Container from "../components/Container";
+import Logo from "../components/Logo";
 
 export default function SignInPage() {
 
@@ -30,7 +30,7 @@ export default function SignInPage() {
 
     return (
         <Container>
-            <Logo src={LogoMeCansei} />
+            <Logo />
             <form onSubmit={handleLogin}>
                 <input placeholder="email" type="email" value={email}
                     onChange={(e) => setEmail(e.target.value)} required />
@@ -46,28 +46,3 @@ export default function SignInPage() {
     )
 }
 
-const Container = styled.section`
-    height: 100vh;
-    background: linear-gradient(
-        180deg,
-        rgb(85, 182, 201) 0%,
-        rgb(255, 158, 176) 100% );
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    p {
-        margin-top: 25px;
-        font-size: 0.9rem;
-        color: rgba(0,0,0,0.7);
-        line-height: 1.2rem;
-    }
-`
-
-const Logo = styled.img`
-    width: 20vw;
-    max-width: 400px;
-    min-width: 275px;
-    margin-bottom: 30px;
-`

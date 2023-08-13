@@ -2,6 +2,7 @@ import { useState } from "react";
 import Context from "./contexts/Context";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignInPage from './pages/SignInPage';
+import SignUpPage from './pages/SignUpPage';
 
 function App() {  
 
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<SignInPage />} />
+          <Route path='/cadastro' element={<SignUpPage />} />
         </Routes>
       </BrowserRouter>  
     </Context.Provider>

@@ -7,5 +7,10 @@ function signin(body) {
     return promise;
 };
 
-const AuthApi = { signin };
+function signup(body) {
+    const promise = axios.post(`${API_URL}/signup`, body);
+    return promise;
+}
+
+const AuthApi = { signin, signup };
 export default AuthApi;
