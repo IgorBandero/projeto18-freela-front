@@ -73,7 +73,7 @@ const Footer = styled.div`
     bottom: 0;
     width: 100vw;
     height: 13vh;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
 
     & > button {
         width: 120px; 

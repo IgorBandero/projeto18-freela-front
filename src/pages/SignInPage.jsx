@@ -11,7 +11,6 @@ export default function SignInPage() {
     const [password, setPassword] = useState("");   
     const {setToken} = useContext(Context); 
     const navigate = useNavigate();
-    localStorage.setItem("token", "");
 
     function handleLogin(e) {
 
@@ -20,7 +19,6 @@ export default function SignInPage() {
 
         promise.then(res => {
                 setToken(res.data.token);
-                localStorage.setItem("token", res.data.token);
                 navigate("/home");
         });
                 

@@ -60,8 +60,8 @@ const ProductCard = styled.div`
     }    
 
     @media (max-width: 430px) {
-        width: 120px;
-        height: 160px;
+        width: 130px;
+        height: 170px;
         margin: 15px;
         padding: 10px;
 
@@ -76,8 +76,8 @@ const ProductCard = styled.div`
         }  
 
         & > .prodData > img {
-            max-width: 60px;
-            max-height: 60px;
+            max-width: 70px;
+            max-height: 70px;
         }              
     }
 `
