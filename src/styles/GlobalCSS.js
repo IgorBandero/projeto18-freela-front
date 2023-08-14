@@ -15,10 +15,10 @@ const GlobalCSS = createGlobalStyle`
     input {
         width: calc(100% - 100px);
         max-width: 600px;  
-        padding: 12px;        
-        font-size: 1rem;
+        padding: 7px 10px;        
+        font-size: 0.8rem;
         letter-spacing: 1.5px; 
-        line-height: 1rem;    
+        line-height: 0.5rem;    
         background-color: rgba(255,1255, 255, 0.6);   
         transition: background-color 0.5s ease;  
         border-radius: 10px;      
@@ -35,11 +35,15 @@ const GlobalCSS = createGlobalStyle`
         outline: 1px solid black;
     }    
 
+    .filled-input {
+      background-color: rgba(255,255,255, 1);
+    }
+
     button {     
-        width: 180px; 
-        padding: 12px;
+        width: 165px; 
+        padding: 10px;
         margin-top: 12px;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         font-weight: bold;
         letter-spacing: 1px;
         line-height: 1rem;
@@ -58,10 +62,10 @@ const GlobalCSS = createGlobalStyle`
     }
 
     button:focus{
-        width: 175px;
+        width: 160px;
         background-color: rgba(125,174, 103, 0.80);
         box-shadow: none;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     
     form {
@@ -77,7 +81,7 @@ const GlobalCSS = createGlobalStyle`
         text-decoration: none;
         color: rgb(34, 72, 80);
         font-family: 'Roboto', sans-serif;
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: bold;
         letter-spacing: 1px;
         line-height: 1.5rem;
@@ -85,6 +89,19 @@ const GlobalCSS = createGlobalStyle`
 
     a:hover{
         text-decoration: underline; 
+    }
+
+    .homeLogo {
+        max-width: 130px;
+        min-width: 100px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .signUpLogo {
+        width: 5vw;
+        min-width: 135px;
+        margin-bottom: 4vh;
     }
 
 `

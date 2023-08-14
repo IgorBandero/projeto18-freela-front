@@ -1,6 +1,6 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useState, useContext} from "react";
-import AuthApi from "../services/AuthApi";
+import AuthApi from "../services/AuthApiLocal";
 import Context from "../contexts/Context";
 import Container from "../components/Container";
 import Logo from "../components/Logo";
@@ -11,6 +11,7 @@ export default function SignInPage() {
     const [password, setPassword] = useState("");   
     const {setToken} = useContext(Context); 
     const navigate = useNavigate();
+    localStorage.setItem("token", "");
 
     function handleLogin(e) {
 

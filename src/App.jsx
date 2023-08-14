@@ -3,6 +3,10 @@ import Context from "./contexts/Context";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
+import HomePage from './pages/HomePage';
+import NewProductPage from "./pages/NewProductPage";
+import MyProductsPage from "./pages/MyProductsPage";
+import ProductPage from "./pages/ProductPage";
 
 function App() {  
 
@@ -14,8 +18,12 @@ function App() {
     <Context.Provider value={contextValue}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<SignInPage />} />
+          <Route path='/' exact element={<SignInPage />} />
           <Route path='/cadastro' element={<SignUpPage />} />
+          <Route path='/home' element={<HomePage />} />
+          <Route path='/novoproduto' element={<NewProductPage />} />
+          <Route path='/meusprodutos' element={<MyProductsPage />} />
+          <Route path='/produto' element={<ProductPage />} />
         </Routes>
       </BrowserRouter>  
     </Context.Provider>
