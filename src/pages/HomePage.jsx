@@ -41,7 +41,7 @@ export default function HomePage(){
 
 const ContainerHome = styled.div`    
     height: 100%;
-    padding-bottom: 120px;
+    padding-bottom: 150px;
     min-height: 100vh;
     background: linear-gradient(
         180deg,

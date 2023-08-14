@@ -59,7 +59,7 @@ export default function ProductPage(){
 const ContainerHome = styled.div`    
     height: 100%;
     min-height: 100vh;
-    padding-bottom: 120px;
+    padding-bottom: 150px;
     background: linear-gradient(
         180deg,
         rgb(85, 182, 201) 0%,
