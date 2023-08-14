@@ -105,4 +105,11 @@ const Footer = styled.div`
         background-color: rgba(133,182, 111, 0.9);   
     }
 
+    & > button:focus{
+        width: 115px;
+        background-color: rgba(125,174, 103, 0.80);
+        box-shadow: none;
+        font-size: 0.8rem;
+    }
+
 `
