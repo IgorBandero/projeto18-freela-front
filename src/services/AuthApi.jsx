@@ -12,5 +12,17 @@ function signup(body) {
     return promise;
 }
 
-const AuthApi = { signin, signup };
+function getId(token){
+
+    const auth = {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+    };
+
+    const promise = axios.get(`${API_URL}/user`, auth);
+    return promise;
+}
+
+const AuthApi = { signin, signup, getId };
 export default AuthApi;

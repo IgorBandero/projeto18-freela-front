@@ -1,5 +1,5 @@
-import { useNavigate, Link } from "react-router-dom";
-import { useState, useContext, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect} from "react";
 import ProductsApi from "../services/ProductsApi";
 import Card from "../components/Card";
 import styled from "styled-components";
@@ -27,7 +27,7 @@ export default function HomePage(){
                 <div className="productsContainer">  
                     {products.map((product, index) => (
                         <Card key={index} id={product.id} name={product.name} 
-                              image={product.image} price={product.price} />
+                              image={product.image} price={product.price} sold={product.sold}/>
                     ))}     
                 </div>
             </Main>
@@ -41,6 +41,7 @@ export default function HomePage(){
 
 const ContainerHome = styled.div`    
     height: 100%;
+    padding-bottom: 120px;
     min-height: 100vh;
     background: linear-gradient(
         180deg,
@@ -63,7 +64,7 @@ const Footer = styled.div`
     bottom: 0;
     width: 100vw;
     height: 13vh;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 1);
 
     & > button {
         width: 120px; 

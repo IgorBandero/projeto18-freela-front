@@ -9,6 +9,10 @@ export default function Card(props){
         navigate(`/produto/${props.id}`);
     };
 
+    if (props.sold === true){
+        return null;
+    }
+
     return <ProductCard>
                 <div className="prodData" onClick={navigateToProduct}> 
                     <img title="Ver detalhes do anúncio" alt="Foto do produto anunciado" src={props.image} ></img>

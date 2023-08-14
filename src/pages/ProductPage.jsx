@@ -49,7 +49,7 @@ export default function ProductPage(){
                 </div>
             </Main>
             <Footer> 
-                <button onClick={() => navigate("/novoproduto")} title="Novo produto para venda"> Anunciar </button>
+                <button onClick={() => navigate("/home")} title="Voltar para a página inicial"> Voltar </button>
                 <button onClick={() => navigate("/meusprodutos")} title="Meus produtos anunciados"> Anúncios </button>
             </Footer>
         </ContainerHome>
@@ -59,6 +59,7 @@ export default function ProductPage(){
 const ContainerHome = styled.div`    
     height: 100%;
     min-height: 100vh;
+    padding-bottom: 120px;
     background: linear-gradient(
         180deg,
         rgb(85, 182, 201) 0%,
@@ -80,7 +81,7 @@ const Footer = styled.div`
     bottom: 0;
     width: 100vw;
     height: 13vh;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 1);
 
     & > button {
         width: 120px; 
@@ -94,6 +95,13 @@ const Footer = styled.div`
 
     & > button:hover {
         background-color: rgba(133,182, 111, 0.9);   
+    }
+
+    & > button:focus{
+        width: 115px;
+        background-color: rgba(125,174, 103, 0.80);
+        box-shadow: none;
+        font-size: 0.8rem;
     }
 
 `

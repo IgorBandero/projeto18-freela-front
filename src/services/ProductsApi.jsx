@@ -1,4 +1,5 @@
 import axios from "axios";
+import AuthApi from "../services/AuthApi";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -24,5 +25,29 @@ function newProduct(body, token){
     return promise;
 }
 
-const ProductsApi = { getProducts, getProduct, newProduct };
+function getUserProducts(token){
+
+    const auth = {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+    };
+
+    const promise = axios.get(`${API_URL}/myproducts/`, auth);
+    return promise;
+}
+
+function deleteProduct(id, token){
+
+    const auth = {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+    };
+
+    const promise = axios.delete(`${API_URL}/products/${id}`, auth);
+    return promise;
+}
+
+const ProductsApi = { getProducts, getProduct, newProduct, getUserProducts, deleteProduct};
 export default ProductsApi;
