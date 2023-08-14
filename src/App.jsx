@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route path='/' exact element={<SignInPage />} />
           <Route path='/cadastro' element={<SignUpPage />} />
-          <Route path='/home' element={<HomePage />} />
+          <Route path='/home' exact element={<HomePage />} />
           <Route path='/novoproduto' element={<NewProductPage />} />
           <Route path='/meusprodutos' element={<MyProductsPage />} />
           <Route path='/produto' element={<ProductPage />} />
