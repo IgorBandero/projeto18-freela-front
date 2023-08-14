@@ -1,33 +1,32 @@
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-export default function Card(props){
-
-    const navigate = useNavigate();
-
-    const navigateToProduct = () => {
-        navigate(`/produto/${props.id}`);
-    };
+export default function CardProduct(props){
 
     return <ProductCard>
-                <div className="prodData" onClick={navigateToProduct}> 
+                <div className="prodData"> 
                     <img title="Ver detalhes do anúncio" alt="Foto do produto anunciado" src={props.image} ></img>
                     <h3>{props.name}</h3>
                     <p>R${props.price.toString().replace(".", ",")}</p>
+                    <p>Categoria: {props.category}</p>
+                    <p>Descrição: {props.description}</p>
+                    <h3> Dados do vendedor: </h3>
+                    <p>Nome: {props.sellerName}</p>
+                    <p>Telefone: {props.phone}</p>
+                    <p>E-mail: {props.email}</p>
                 </div>        
             </ProductCard>
 }
 
 const ProductCard = styled.div`
-    width: 160px;
-    height: 200px;
+    width: 300px;
+    height: 340px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;       
     text-align: center;
     margin: 15px;
-    padding: 15px;
+    padding: 0 20px;
     background-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
     font-family: "Roboto", sans-serif;
@@ -49,8 +48,8 @@ const ProductCard = styled.div`
     }
 
     & > .prodData > h3 {
-        font-weight: 400;
-        font-size: 15px;
+        font-weight: 700;
+        font-size: 0.7rem;
         margin-top: 5px;
     }
 
@@ -60,21 +59,19 @@ const ProductCard = styled.div`
     }
 
     & > .prodData > img {
-        max-width: 80px;
-        max-height: 80px;
-        margin-top: 5px;
+        max-width: 100px;
+        max-height: 100px;
         margin-bottom: 5px;
+        margin-top: 0;
     }    
 
     @media (max-width: 430px) {
-        width: 130px;
-        height: 170px;
-        margin: 15px;
-        padding: 10px;
+        width: 300px;
+        height: 430px;
 
         & > .prodData > h3 {
-            font-weight: 400;
-            font-size: 13px;
+            font-weight: 700;
+            font-size: 0.7rem;
         }
 
         & > .prodData > p {
@@ -83,8 +80,8 @@ const ProductCard = styled.div`
         }  
 
         & > .prodData > img {
-            max-width: 70px;
-            max-height: 70px;
+            max-width: 90px;
+            max-height: 90px;
         }              
     }
 `

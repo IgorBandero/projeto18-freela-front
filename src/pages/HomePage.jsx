@@ -18,14 +18,6 @@ export default function HomePage(){
             setProducts(res.data);})
         promise.catch(res => {console.log(res.response.data);})},[]);
 
-    function getProductDetails(id){
-        const promise = ProductsApi.getProduct(id);
-        promise.then(res => {
-            console.log(res.data);
-            navigate("/produto");})
-        promise.catch(res => {console.log(res.response.data);});
-    }
-
     return (
     
         <ContainerHome>
@@ -36,8 +28,7 @@ export default function HomePage(){
                 <div className="productsContainer">  
                     {products.map((product, index) => (
                         <Card key={index} id={product.id} name={product.name} 
-                                  image={product.image} price={product.price}  
-                                  showProduct={getProductDetails}/>
+                              image={product.image} price={product.price} />
                     ))}     
                 </div>
             </Main>

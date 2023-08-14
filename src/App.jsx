@@ -21,9 +21,9 @@ function App() {
           <Route path='/' exact element={<SignInPage />} />
           <Route path='/cadastro' element={<SignUpPage />} />
           <Route path='/home' exact element={<HomePage />} />
+          <Route path='/produto/:id' element={<ProductPage />} />
           <Route path='/novoproduto' element={<NewProductPage />} />
-          <Route path='/meusprodutos' element={<MyProductsPage />} />
-          <Route path='/produto' element={<ProductPage />} />
+          <Route path='/meusprodutos' element={<MyProductsPage />} />          
         </Routes>
       </BrowserRouter>  
     </Context.Provider>
