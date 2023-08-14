@@ -21,6 +21,15 @@ const Container = styled.div`
         line-height: 1.2rem;
     }
 
+    h1 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 1.2rem;
+        font-family: 'Roboto', sans-serif;
+        color: rgba(0,0,0,0.7);
+        line-height: 1.2rem;
+    }
+
 `
 
 export default Container;

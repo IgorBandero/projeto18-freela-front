@@ -12,5 +12,17 @@ function getProduct(id) {
     return promise;
 };
 
-const ProductsApi = { getProducts, getProduct };
+function newProduct(body, token){
+
+    const auth = {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+    };
+
+    const promise = axios.post(`${API_URL}/products/`, body, auth);
+    return promise;
+}
+
+const ProductsApi = { getProducts, getProduct, newProduct };
 export default ProductsApi;

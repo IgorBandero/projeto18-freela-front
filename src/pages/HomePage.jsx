@@ -1,6 +1,5 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useState, useContext, useEffect} from "react";
-import Context from "../contexts/Context";
 import ProductsApi from "../services/ProductsApi";
 import Card from "../components/Card";
 import styled from "styled-components";
