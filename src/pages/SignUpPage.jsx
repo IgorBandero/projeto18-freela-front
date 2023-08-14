@@ -1,7 +1,7 @@
 import { useState, useContext} from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { IMaskInput } from "react-imask";
-import AuthApi from "../services/AuthApiLocal";
+import AuthApi from "../services/AuthApi";
 import Container from "../components/Container";
 import Logo from "../components/Logo";
 

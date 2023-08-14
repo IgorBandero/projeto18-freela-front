@@ -1,6 +1,6 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useState, useContext} from "react";
-import AuthApi from "../services/AuthApiLocal";
+import AuthApi from "../services/AuthApi";
 import Context from "../contexts/Context";
 import Container from "../components/Container";
 import Logo from "../components/Logo";
